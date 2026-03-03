@@ -23,7 +23,10 @@ RUN playwright install chromium
 RUN playwright install-deps chromium
 
 # Copy app files
-COPY monitor.py bot.py events.json ./
+COPY monitor.py bot.py ./
+
+# Create empty events.json if not present
+RUN echo '[]' > events.json
 
 # Env vars (override at runtime)
 ENV TG_TOKEN=8666314563:AAFXDLrKjlkWz41rLo9BLdkutJj4h1Y8JKA
