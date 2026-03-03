@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+bms_profile/
+monitor.log
+process_status.json
+.env
